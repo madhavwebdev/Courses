@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//         JavaScript provides a variety of string methods that allow you to manipulate and work with strings easily. Here’s an overview of some commonly used string methods:
+
+// ### 1. **charAt(index)**
+// Returns the character at the specified index.
+
+// ```javascript
+// let str = "Hello";
+// console.log(str.charAt(1)); // "e"
+// ```
+
+// ### 2. **charCodeAt(index)**
+// Returns the Unicode of the character at the specified index.
+
+// ```javascript
+// let str = "Hello";
+// console.log(str.charCodeAt(1)); // 101
+// ```
+
+// ### 3. **concat(str1, str2, ...)**
+// Joins two or more strings and returns a new string.
+
+// ```javascript
+// let str1 = "Hello";
+// let str2 = "World";
+// console.log(str1.concat(" ", str2)); // "Hello World"
+// ```
+
+// ### 4. **includes(searchString, position)**
+// Checks if a string contains the specified string or characters.
+
+// ```javascript
+// let str = "Hello World";
+// console.log(str.includes("World")); // true
+// console.log(str.includes("world")); // false
+// ```
+
+// ### 5. **endsWith(searchString, length)**
+// Checks if a string ends with the specified string/characters.
+
+// ```javascript
+// let str = "Hello World";
+// console.log(str.endsWith("World")); // true
+// console.log(str.endsWith("Hello", 5)); // true
+// ```
+
+// ### 6. **indexOf(searchValue, fromIndex)**
+// Returns the index of the first occurrence of a specified text in a string. Returns `-1` if the text is not found.
+
+// ```javascript
+// let str = "Hello World";
+// console.log(str.indexOf("World")); // 6
+// console.log(str.indexOf("world")); // -1
+// ```
+
+// ### 7. **lastIndexOf(searchValue, fromIndex)**
+// Returns the index of the last occurrence of a specified text in a string. Returns `-1` if the text is not found.
+
+// ```javascript
+// let str = "Hello World, Hello Universe";
+// console.log(str.lastIndexOf("Hello")); // 13
+// ```
+
+// ### 8. **match(regex)**
+// Searches a string for a match against a regular expression and returns the matches as an array. Returns `null` if no match is found.
+
+// ```javascript
+// let str = "Hello World";
+// console.log(str.match(/o/g)); // ["o", "o"]
+// ```
+
+// ### 9. **replace(searchValue, newValue)**
+// Replaces a specified value with another value in a string.
+
+// ```javascript
+// let str = "Hello World";
+// console.log(str.replace("World", "Universe")); // "Hello Universe"
+// ```
+
+// ### 10. **replaceAll(searchValue, newValue)**
+// Replaces all occurrences of a specified value with another value in a string.
+
+// ```javascript
+// let str = "Hello World, Hello Universe";
+// console.log(str.replaceAll("Hello", "Hi")); // "Hi World, Hi Universe"
+// ```
+
+// ### 11. **search(regex)**
+// Searches a string for a specified value or regular expression and returns the position of the match.
+
+// ```javascript
+// let str = "Hello World";
+// console.log(str.search("World")); // 6
+// ```
+
+// ### 12. **slice(start, end)**
+// Extracts a part of a string and returns a new string. The end parameter is optional.
+
+// ```javascript
+// let str = "Hello World";
+// console.log(str.slice(0, 5)); // "Hello"
+// console.log(str.slice(-5));   // "World"
+// ```
+
+// ### 13. **split(separator, limit)**
+// Splits a string into an array of substrings.
+
+// ```javascript
+// let str = "Hello World";
+// console.log(str.split(" ")); // ["Hello", "World"]
+// ```
+
+// ### 14. **startsWith(searchString, position)**
+// Checks if a string starts with specified characters.
+
+// ```javascript
+// let str = "Hello World";
+// console.log(str.startsWith("Hello")); // true
+// console.log(str.startsWith("World", 6)); // true
+// ```
+
+// ### 15. **substring(start, end)**
+// Extracts characters from a string between two specified indices.
+
+// ```javascript
+// let str = "Hello World";
+// console.log(str.substring(0, 5)); // "Hello"
+// console.log(str.substring(6));    // "World"
+// ```
+
+// ### 16. **toLowerCase()**
+// Converts a string to lowercase letters.
+
+// ```javascript
+// let str = "Hello World";
+// console.log(str.toLowerCase()); // "hello world"
+// ```
+
+// ### 17. **toUpperCase()**
+// Converts a string to uppercase letters.
+
+// ```javascript
+// let str = "Hello World";
+// console.log(str.toUpperCase()); // "HELLO WORLD"
+// ```
+
+// ### 18. **trim()**
+// Removes whitespace from both sides of a string.
+
+// ```javascript
+// let str = "  Hello World  ";
+// console.log(str.trim()); // "Hello World"
+// ```
+
+// ### 19. **trimStart()**
+// Removes whitespace only from the beginning of a string.
+
+// ```javascript
+// let str = "  Hello World  ";
+// console.log(str.trimStart()); // "Hello World  "
+// ```
+
+// ### 20. **trimEnd()**
+// Removes whitespace only from the end of a string.
+
+// ```javascript
+// let str = "  Hello World  ";
+// console.log(str.trimEnd()); // "  Hello World"
+// ```
+
+// ### 21. **padStart(targetLength, padString)**
+// Pads the current string with another string (repeated, if needed) so that the resulting string reaches a given length. The padding is applied from the start of the current string.
+
+// ```javascript
+// let str = "5";
+// console.log(str.padStart(3, "0")); // "005"
+// ```
+
+// ### 22. **padEnd(targetLength, padString)**
+// Pads the current string with another string (repeated, if needed) so that the resulting string reaches a given length. The padding is applied from the end of the current string.
+
+// ```javascript
+// let str = "5";
+// console.log(str.padEnd(3, "0")); // "500"
+// ```
+
+// These are just some of the most commonly used string methods in JavaScript. Each method can be very useful depending on the specific need in manipulating or querying strings.
+    </script>
+</body>
+</html>
