@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *
+        {
+            margin: 0;
+        }
+.container
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: black;
+}
+.dice
+{
+    height: 200px;
+    width: 200px;
+    border-radius: 20px;
+    background-color:red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    transition: all 0.5s ease;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="dice">
+            <h1 id="number"></h1>
+        </div>
+    </div>
+
+
+    <script>
+        while(1)
+        {
+        addEventListener("click", roll);
+        function roll()
+        {
+        let number = document.getElementById("number");
+        let dice = document.querySelector(".dice");
+        let random = Math.floor(Math.random() * 6) + 1;
+        number.innerHTML = random;
+
+        dice.style.transform = "rotateZ(720deg)";
+
+        }
+    }
+    </script>
+</body>
+</html>
