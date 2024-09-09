@@ -3,57 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Dice Roll</title>
     <style>
-        *
-        {
+        * {
             margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-.container
-{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: black;
-}
-.dice
-{
-    height: 200px;
-    width: 200px;
-    border-radius: 20px;
-    background-color:red;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 50px;
-    transition: all 0.5s ease;
-}
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: black;
+        }
+
+        .dice {
+            height: 200px;
+            width: 200px;
+            border-radius: 20px;
+            background-color: red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 50px;
+            color: white;
+            transition: transform 0.7s ease, background-color 0.7s ease;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="dice">
-            <h1 id="number"></h1>
+            <h1 id="number">1</h1>
         </div>
     </div>
 
-
     <script>
-        while(1)
-        {
+        let rolling = false; 
+
         addEventListener("click", roll);
-        function roll()
-        {
-        let number = document.getElementById("number");
-        let dice = document.querySelector(".dice");
-        let random = Math.floor(Math.random() * 6) + 1;
-        number.innerHTML = random;
 
-        dice.style.transform = "rotateZ(720deg)";
+        function roll() {
+            if (rolling) return; 
+            rolling = true;
 
+            let number = document.getElementById("number");
+            let dice = document.querySelector(".dice");
+
+            let random = Math.floor(Math.random() * 6) + 1;
+            number.innerHTML = random;
+
+            dice.style.backgroundColor = getRandomColor();
+
+            dice.style.transform = "rotateZ(720deg)";
+            setTimeout(() => {
+                dice.style.transform = "rotateZ(0deg)";
+                rolling = false; 
+            }, 700);
         }
-    }
+
+        function getRandomColor() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
     </script>
 </body>
 </html>
