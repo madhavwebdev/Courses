@@ -43,7 +43,7 @@
             <h1 id="number">1</h1>
         </div>
     </div> 
-    
+
 
     <script>
         let rolling = false; 
@@ -51,7 +51,7 @@
         addEventListener("click", roll);
 
         function roll() {
-            if (rolling) return; 
+         if (rolling) return;
             rolling = true;
 
             let number = document.getElementById("number");
@@ -66,7 +66,7 @@
             setTimeout(() => {
                 dice.style.transform = "rotateZ(0deg)";
                 rolling = false; 
-            }, 700);
+            }, 100);
         }
 
         function getRandomColor() {
